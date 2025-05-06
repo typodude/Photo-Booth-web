@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Photo Booth</title>
+  <link rel="stylesheet" href="booth.css">
+</head>
+<body>
+  <div class="container">
+    <h1>📸Photo Booth</h1>
+    
+    <div class="booth-wrapper">
+      <div class="video-wrapper">
+        <video id="video" autoplay></video>
+      </div>
+
+      <div class="capture-wrapper">
+        <div class="controls">
+          <select id="filter">
+            <option value="none">None</option>
+            <option value="grayscale(100%)">Grayscale</option>
+            <option value="sepia(100%)">Sepia</option>
+            <option value="invert(100%)">Invert</option>
+            <option value="blur(3px)">Blur</option>
+            <option value="brightness(1.5)">Bright</option>
+            <option value="contrast(2)">High Contrast</option>
+            <option value="saturate(3)">Saturated</option>
+            <option value="hue-rotate(180deg)">Hue Flip</option>
+          </select>
+
+          <button id="capture">📸 Capture</button>
+          <a id="download" download="photo.png">💾 Download</a>
+        </div>
+
+        <div class="photo-preview">
+          <h2>Captured Photo</h2>
+          <div class="polaroid-frame">
+            <img id="captured-photo" src="" alt="Captured Image" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="booth.js"></script>
+</body>
+</html>
